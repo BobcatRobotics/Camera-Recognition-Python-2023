@@ -4,26 +4,20 @@ from cscore import CameraServer
 # Import OpenCV and NumPy
 import cv2
 import numpy as np
-print('q')
+print('Startup')
 def main():
-    print('w')
-    #cs = CameraServer.getInstance()
-    # camera = CameraServer.startAutomaticCapture()
-    # camera.setResolution(1200,720)
-    # CameraServer.enableLogging()
+    print('Main')
+   
     print('camera')
-    # cs = CameraServer.startAutomaticCapture()
-    # cs = CameraServer.getInstance()
-    # cs.
+
     cs = CameraServer.getServer()
-    # cs.enumerateSinks
-    # CameraServer.addCamera()
+
     print(cs.getConfigJson())
 
     # Capture from the first USB Camera on the system
     camera = CameraServer.startAutomaticCapture(dev=1)
 
-    camera.setResolution(320, 240)
+    camera.setResolution(430, 350)
 
 
     # Capture from the first USB Camera on the system
@@ -44,7 +38,7 @@ def main():
         # Tell the CvSink to grab a frame from the camera and put it
         # in the source image.  If there is an error notify the output.
         time, img = cvSink.grabFrame(img)
-        cv2.imshow("Faces found", img)
+        cv2.imshow("Baby Monitor", img)
         cv2.waitKey(1)
         if time == 0:
             # Send the output the error.
