@@ -7,9 +7,7 @@ import numpy as np
 print('Startup')
 def main():
     print('Main')
-   
-    print('camera')
-
+    
     cs = CameraServer.getServer()
 
     print(cs.getConfigJson())
@@ -19,11 +17,8 @@ def main():
 
     camera.setResolution(430, 350)
 
-
     # Capture from the first USB Camera on the system
     # camera = CameraServer.startAutomaticCapture()
-    # camera.setResolution(320, 240)
-
     # Get a CvSink. This will capture images from the camera
     cvSink = CameraServer.getVideo()
     # print(cvSink)
