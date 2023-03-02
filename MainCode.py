@@ -4,8 +4,8 @@ from cscore import CameraServer
 import numpy as np
 print('Successful')
 cs = CameraServer.getServer()
-# Get user supplied values
-# imagePath = sys.argv[1]
+#Get user supplied values
+#imagePath = sys.argv[1]
 #imagePath = r"C:\Users\BobcatUser\Downloads\StreetImageTest.jpg"
 camera = CameraServer.startAutomaticCapture(dev=1)
 
